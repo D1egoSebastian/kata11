@@ -8,28 +8,28 @@ def compare_chars(char1, char2):
 
 def sort_it(string):
 
-    stringlower = string.lower()
+    lowerstring = string.lower()
 
-    not_special = ""
-    for char in stringlower:
-        if char.isalpha():
-            not_special += char
+    no_special = ""
+    for char in lowerstring:
+        if char .isalpha():
+            no_special += char
 
     is_sorted = False
     while not is_sorted:
         is_sorted = True
-        for i in range(len(not_special) - 1):
-            char1 = not_special[i]
-            char2 = not_special[i + 1]
+        for i in range(len(no_special) - 1):
+            char1 = no_special[i]
+            char2 = no_special[i + 1]
             compare = compare_chars(char1, char2)
 
             if compare == 1:
-                not_special = not_special[:i] + char2 + char1 + not_special[i + 2:]
+                no_special = no_special[:i] + char2 + char1 + no_special[i+2:]
                 is_sorted = False
 
-    return not_special
+    return no_special
 
-string = "ABC"
+string = "When not studying nuclear physics, Bambi likes to play beach volleyball"
 answer = sort_it(string)
 print(answer)
 
