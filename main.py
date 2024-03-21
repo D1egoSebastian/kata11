@@ -1,18 +1,15 @@
 
-
 def compare_chars(char1, char2):
     if char1 < char2:
         return -1
     elif char1 > char2:
         return 1
-
 def sort_it(string):
-
     lowerstring = string.lower()
 
     no_special = ""
     for char in lowerstring:
-        if char .isalpha():
+        if char.isalpha():
             no_special += char
 
     is_sorted = False
@@ -29,8 +26,7 @@ def sort_it(string):
 
     return no_special
 
-string = "When not studying nuclear physics, Bambi likes to play beach volleyball"
-answer = sort_it(string)
-print(answer)
 
 
+string = "When not studying nuclear physics, Bambi likes to play beach volleyball."
+print(sort_it(string))
